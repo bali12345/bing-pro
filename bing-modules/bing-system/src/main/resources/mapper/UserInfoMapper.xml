@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bing.mapper.UserInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.bing.entity.UserInfo">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="oneId" column="one_id" jdbcType="VARCHAR"/>
+            <result property="tenantId" column="tenant_id" jdbcType="VARCHAR"/>
+            <result property="delFlag" column="del_flag" jdbcType="CHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="userCode" column="user_code" jdbcType="INTEGER"/>
+            <result property="appType" column="app_type" jdbcType="CHAR"/>
+            <result property="appId" column="app_id" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="userGrade" column="user_grade" jdbcType="SMALLINT"/>
+            <result property="pointsCurrent" column="points_current" jdbcType="INTEGER"/>
+            <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="CHAR"/>
+            <result property="birthday" column="birthday" jdbcType="VARCHAR"/>
+            <result property="headimgUrl" column="headimg_url" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="country" column="country" jdbcType="VARCHAR"/>
+            <result property="province" column="province" jdbcType="VARCHAR"/>
+            <result property="parentId" column="parent_id" jdbcType="VARCHAR"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+            <result property="registerMainBody" column="register_main_body" jdbcType="VARCHAR"/>
+            <result property="lastLoginTime" column="last_login_time" jdbcType="TIMESTAMP"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="provinceCode" column="province_code" jdbcType="VARCHAR"/>
+            <result property="countyCode" column="county_code" jdbcType="VARCHAR"/>
+            <result property="cityCode" column="city_code" jdbcType="VARCHAR"/>
+            <result property="registerShopId" column="register_shop_id" jdbcType="VARCHAR"/>
+            <result property="mailBox" column="mail_box" jdbcType="VARCHAR"/>
+            <result property="enable" column="enable" jdbcType="CHAR"/>
+            <result property="idNumber" column="id_number" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,one_id,tenant_id,
+        del_flag,create_time,update_time,
+        user_code,app_type,app_id,
+        phone,user_name,password,
+        user_grade,points_current,nick_name,
+        sex,birthday,headimg_url,
+        city,country,province,
+        parent_id,version,register_main_body,
+        last_login_time,remark,province_code,
+        county_code,city_code,register_shop_id,
+        mail_box,enable,id_number
+    </sql>
+</mapper>

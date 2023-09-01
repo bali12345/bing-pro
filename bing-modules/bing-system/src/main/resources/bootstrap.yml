@@ -1,0 +1,38 @@
+# Tomcat
+server:
+  port: 8080
+  # 增加请求头接受大小
+  tomcat:
+    max-http-form-post-size: -1
+  #logging:
+  # level:
+  #  com.app.mapper: debug
+  #mybatis-plus:
+  #  configuration:
+  #   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: bing-system
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        #server-addr: 172.17.111.192:8848
+        server-addr: 192.168.43.136:8848
+#        namespace: f88f5e28-5c99-4223-aac6-c9bb8dba67c5
+      config:
+        # 配置中心地址
+        #server-addr: 172.17.111.192:8848
+        server-addr: 192.168.43.136:8848
+        # 配置文件格式
+        file-extension: yml
+        #prefix: blood-sugar
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#        namespace: f88f5e28-5c99-4223-aac6-c9bb8dba67c5

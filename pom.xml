@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bing</groupId>
+    <artifactId>bing-pro</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>bing-common</module>
+        <module>bing-modules</module>
+        <module>bing-api</module>
+        <module>bing-auth</module>
+        <module>bing-common/common-swagger</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <!--        boot版本-->
+        <spring-boot.version>2.6.4</spring-boot.version>
+        <!--        cloud版本-->
+        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <!--        cloud-alibaba-->
+        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <!--        nacos-->
+        <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+        <!--        boot-admin-->
+        <spring-boot-admin.version>3.1.1</spring-boot-admin.version>
+        <!--        mybatis-->
+        <spring-boot.mybatis>2.2.2</spring-boot.mybatis>
+        <!--        mybatis-plus-->
+        <mybatis-plus.version>3.3.0</mybatis-plus.version>
+        <!--        lombok-->
+        <lombok.version>1.18.22</lombok.version>
+        <knife4j.version>3.0.3</knife4j.version>
+        <swagger.fox.version>3.0.0</swagger.fox.version>
+        <swagger.core.version>1.6.2</swagger.core.version>
+        <tobato.version>1.27.2</tobato.version>
+        <commons.io.version>2.11.0</commons.io.version>
+        <!--        jwt-->
+        <jjwt.version>0.9.1</jjwt.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <transmittable-thread-local.version>2.12.2</transmittable-thread-local.version>
+        <!--        hutool-->
+        <hutool.version>5.8.0.M2</hutool.version>
+        <okhttp3.version>4.5.0</okhttp3.version>
+        <httpclient.version>4.5.12</httpclient.version>
+        <lock4j.version>2.2.2</lock4j.version>
+        <emoji-java.version>5.1.1</emoji-java.version>
+        <com.easemob.version>1.0.5</com.easemob.version>
+        <jpush.clent.version>3.4.9</jpush.clent.version>
+        <!--        微信-->
+        <weixin-java.version>3.7.0</weixin-java.version>
+        <!--       -->
+        <emoji-java.version>5.1.1</emoji-java.version>
+        <!--        极光-->
+        <jiguang.common.version>1.1.10</jiguang.common.version>
+        <!--        数据源-->
+        <druid.version>1.2.8</druid.version>
+        <dynamic-ds.version>3.5.0</dynamic-ds.version>
+        <!--     transmittable   -->
+        <transmittable-thread-local.version>2.12.2</transmittable-thread-local.version>
+        <!--      common-core  -->
+        <bing.version>1.0-SNAPSHOT</bing.version>
+        <!--poi       -->
+        <poi.version>4.1.2</poi.version>
+    </properties>
+
+    <!-- 依赖声明 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.bing</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${bing.version}</version>
+            </dependency>
+
+            <!-- SpringCloud 微服务 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- SpringCloud Alibaba 微服务 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Alibaba Nacos 配置 -->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${alibaba.nacos.version}</version>
+            </dependency>
+
+            <!-- SpringBoot 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--  SpringBoot 监控客户端 -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin.version}</version>
+            </dependency>
+
+            <!-- Mybatis-Plus 依赖配置 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!-- Swagger 依赖配置 -->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+
+
+            <!-- io常用工具类 -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+
+            <!-- Collection 增强Java集合框架 -->
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+
+            <!-- JWT -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <!-- 线程传递值 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.vdurmont/emoji-java -->
+            <dependency>
+                <groupId>com.vdurmont</groupId>
+                <artifactId>emoji-java</artifactId>
+                <version>${emoji-java.version}</version>
+            </dependency>
+
+            <!-- 基于redis的分布式锁 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>lock4j-redis-template-spring-boot-starter</artifactId>
+                <version>${lock4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.easemob/rest-java-sdk -->
+            <dependency>
+                <groupId>com.easemob</groupId>
+                <artifactId>rest-java-sdk</artifactId>
+                <version>${com.easemob.version}</version>
+            </dependency>
+            <!-- 线程传递值 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+
+<!--            api-->
+            <dependency>
+                <groupId>com.bing</groupId>
+                <artifactId>api-bing-system</artifactId>
+                <version>${bing.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bing</groupId>
+                <artifactId>common-redis</artifactId>
+                <version>${bing.version}</version>
+            </dependency>
+
+            <!-- excel工具 -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-admin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
