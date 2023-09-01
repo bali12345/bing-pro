@@ -7,7 +7,7 @@ package com.bing.listener;
 //import org.springframework.kafka.annotation.KafkaListener;
 //
 ////@Configuration
-//public class KafkaConsumer {
+public class KafkaConsumer {
 //
 ////    @KafkaListener(topics = "register")
 //    public void consume(String message) {
@@ -16,4 +16,4 @@ package com.bing.listener;
 //        System.out.println("正在为 " + user.getName() + " 办理注册业务...");
 //        System.out.println("注册成功");
 //    }
-//}
+}
