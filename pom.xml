@@ -27,9 +27,9 @@
         <!--        cloud-alibaba-->
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <!--        nacos-->
-        <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+        <alibaba.nacos.version>2.2.3</alibaba.nacos.version>
         <!--        boot-admin-->
-        <spring-boot-admin.version>3.1.1</spring-boot-admin.version>
+        <spring-boot-admin.version>2.6.2</spring-boot-admin.version>
         <!--        mybatis-->
         <spring-boot.mybatis>2.2.2</spring-boot.mybatis>
         <!--        mybatis-plus-->
@@ -68,6 +68,7 @@
         <bing.version>1.0-SNAPSHOT</bing.version>
         <!--poi       -->
         <poi.version>4.1.2</poi.version>
+        <xxl-job-version>2.4.0</xxl-job-version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -208,18 +209,18 @@
                 <artifactId>rest-java-sdk</artifactId>
                 <version>${com.easemob.version}</version>
             </dependency>
-            <!-- 线程传递值 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>transmittable-thread-local</artifactId>
-                <version>${transmittable-thread-local.version}</version>
-            </dependency>
 
 <!--            api-->
             <dependency>
                 <groupId>com.bing</groupId>
                 <artifactId>api-bing-system</artifactId>
                 <version>${bing.version}</version>
+            </dependency>
+<!--xxl-job-->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job-version}</version>
             </dependency>
 
             <dependency>
