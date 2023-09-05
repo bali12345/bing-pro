@@ -31,7 +31,6 @@ spring:
         server-addr: 192.168.43.136:8848
         # 配置文件格式
         file-extension: yml
-        #prefix: blood-sugar
         # 共享配置
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
